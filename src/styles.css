@@ -1,0 +1,33 @@
+#sound-table {
+    margin: 5vw;
+}
+
+#tbody {
+    align-items: center;
+}
+
+td {
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+}
+
+th {
+    background-color: whitesmoke;
+}
+
+/* th:hover {
+    cursor: pointer;
+} */
+
+#symbol:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#table-title {
+    text-align: center;
+    background: gainsboro;
+    font-size: 2rem;
+    font-weight: bold;
+}
