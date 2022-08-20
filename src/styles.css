@@ -16,6 +16,14 @@ th {
     background-color: whitesmoke;
 }
 
+a {
+    color: black !important;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* th:hover {
     cursor: pointer;
 } */
