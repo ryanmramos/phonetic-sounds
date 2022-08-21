@@ -65,12 +65,65 @@ function MainModal() {
                     stops</b>.</>}
             />
         </div>
+        <div class={modalStyle} id="oralstop-modal">
+            <ConsonantModal
+                header="Oral stops"
+                body={<>Sounds involving a <u>complete closure of the vocal tract</u> with
+                    no nasal airflow are called <b>oral stops</b>.</>}
+            />
+        </div>
+        <div class={modalStyle} id="affricate-modal">
+            <ConsonantModal
+                header="Affricates"
+                body={<>Sounds that are produced by combining <u>a stop with a following
+                    fricative</u> in rapid succession are <b>affricates</b>.</>}
+            />
+        </div>
+        <div class={modalStyle} id="nasalstop-modal">
+            <ConsonantModal
+                header="Nasal stops"
+                body={<>Sounds involving a <u>complete closure of the vocal tract</u> with
+                    nasal airflow are called <b>nasal stops</b>.</>}
+            />
+        </div>
+        <div class={modalStyle} id="flap-modal">
+            <ConsonantModal
+                header="Flap (tap)"
+                body={<>Sounds that are produced with <u>a complete closure at the alveolar
+                    ridge</u> are called <b>flaps</b>. (The key difference between a stop and
+                    a flap is the extreme shortness of the closure for the flap).</>}
+            />
+        </div>
+        <div class={modalStyle} id="fricative-modal">
+            <ConsonantModal
+                header="Fricatives"
+                body={<>Sounds produced by <u>a tight narrowing of articulators</u> are
+                    termed <b>fricatives</b>.</>}
+            />
+        </div>
+        <div class={modalStyle} id="centralapprox-modal">
+            <ConsonantModal
+                header="Central approximants"
+                body={<>Sounds produced through <u>a slight narrowing of the vocal tract</u>, but
+                    not enough to cause noise or a complete obstruction are
+                    called <b>approximants</b>. (Difference between central and lateral noted in
+                    lateral approximant description).</>}
+            />
+        </div>
+        <div class={modalStyle} id="lateralapprox-modal">
+            <ConsonantModal
+                header="Lateral approximants"
+                body={<>The <b>l</b> sound is the only lateral approximant in English
+                    and is an approximant produced with <u>a closure only in the center
+                    of the mouth</u>, making it a <b>lateral approximant</b>.</>}
+            />
+        </div>
         </>
     );
 }
 
 /*
-    Model for all consonant models.
+    Model for all consonant manner and place.
     props:
         - props.header: name of modal
         - props.body: description of modal (HTML)
@@ -78,7 +131,7 @@ function MainModal() {
 function ConsonantModal(props) {
     return(
         <>
-        <a href="#modal" class="modal-overlay close-btn" aria-label="Close"></a><div class="modal-content" role="document">
+        <a href="#" class="modal-overlay close-btn" aria-label="Close"></a><div class="modal-content" role="document">
             <div class="modal-header">
                 <div class="modal-header">
                     <h3>{props.header}</h3>
@@ -88,7 +141,31 @@ function ConsonantModal(props) {
                 </div>
                 <div class="modal-footer">
                     <div class="form-section u-text-right">
-                        <a href="#modal">
+                        <a href="#">
+                            <buttonn class="btn btn--sm u-inline-block">CLOSE</buttonn>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </>
+    );
+}
+
+function SymbolModal(props) {
+    return(
+        <>
+        <a href="#" class="modal-overlay close-btn" aria-label="Close"></a><div class="modal-content" role="document">
+            <div class="modal-header">
+                <div class="modal-header">
+                    <h3>{props.header}</h3>
+                </div>
+                <div class="modal-body">
+                    {props.body}
+                </div>
+                <div class="modal-footer">
+                    <div class="form-section u-text-right">
+                        <a href="#">
                             <buttonn class="btn btn--sm u-inline-block">CLOSE</buttonn>
                         </a>
                     </div>

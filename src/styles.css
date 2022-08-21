@@ -39,3 +39,11 @@ a:hover {
     font-size: 2rem;
     font-weight: bold;
 }
+
+#table-footer {
+    text-align: left;
+    background: gainsboro;
+    font-size: 1rem;
+    caption-side: bottom;
+    padding-left: 1rem;
+}
